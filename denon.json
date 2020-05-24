@@ -1,0 +1,33 @@
+{
+  "$schema": "https://deno.land/x/denon/schema.json",
+  "scripts": {
+    "start": {
+      "cmd":"denon run app.js",
+      "allow": ["env","read"],
+      "env":{
+        "ENV":"production"
+      }
+    },
+    "start:local":{
+      "cmd":"denon run app.js",
+      "allow": ["env","read"],
+      "env":{
+        "ENV":"local"
+      }
+    },
+    "start:develop":{
+      "cmd":"denon run --allow-all app.js",
+      "allow": ["env","read"],
+      "env":{
+        "ENV":"develop"
+      }
+    },     
+    "start:testing":{
+      "cmd":"denon run --allow-all app.js",
+      "allow": ["env","read"],
+      "env":{
+        "ENV":"testing"
+      }
+    }    
+  }
+}
